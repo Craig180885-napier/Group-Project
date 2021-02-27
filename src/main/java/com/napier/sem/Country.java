@@ -21,8 +21,8 @@ public class Country
 
 
     /**
-     * Takes the result of an executed SQL query, extracts
-     * the data we need and stores it in the class properties
+     * Constructor which takes the result of an executed SQL query, extracts
+     * the data we need and stores it in the class properties.
      * @param result The result of a query with a country as a result
      * @throws SQLException
      */
