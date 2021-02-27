@@ -21,14 +21,13 @@ public class DAO
     }
 
     /**
-     * This takes an SQL query in the form of a string and executes it against
-     * the database.  It is only for use with statements that should return
-     * country records.  It will return the countries in a list of Country
-     * objects.
+     * Takes an SQL query as a string and executes it against the database.
+     * It is only for use with statements that should return country records.
+     * It will return the countries in a list of Country objects.
      * @param statementString The SQL statement to be executed
      * @return An ArrayList of country objects
      */
-    private ArrayList<Country> ExecuteCountryStatement(String statementString)
+    private ArrayList<Country> ExecuteCountryQuery(String statementString)
     {
         ArrayList<Country> countries = new ArrayList<>();
         try
@@ -67,7 +66,7 @@ public class DAO
                     "FROM country co\n" +
                     "ORDER BY population DESC\n" +
                     "LIMIT " + n;
-        return ExecuteCountryStatement(statementString);
+        return ExecuteCountryQuery(statementString);
     }
 
     /**
